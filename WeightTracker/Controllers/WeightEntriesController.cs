@@ -17,8 +17,8 @@ namespace WeightTracker.Controllers
         // index view... this method returns the weight history ordered by date
         public ActionResult Index()
         {
-            var filteredByDate = db.WeightEntries.OrderByDescending(fd => fd.Date).ToList();
-            return View(filteredByDate);
+            //var filteredByDate = db.WeightEntries.OrderByDescending(fd => fd.Date).ToList();
+            return View(db.WeightEntries.OrderByDescending(fd => fd.Date).ToList());
             //return View(db.WeightEntries.ToList());
         }
 
