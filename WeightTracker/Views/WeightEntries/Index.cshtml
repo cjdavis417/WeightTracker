@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WeightTracker.Models.WeightEntry>
+
+@{
+    ViewBag.Title = "Index";
+
+    List<string> months = new List<string>
+        {
+            "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+        };
+
+        string DateFormatter(DateTime date)
+        {
+            return months[date.Month - 1] + " " + date.Day + ", " + date.Year;
+
+        }
+}
+
+<h2>Weight History</h2>
+
+<p>
+    @Html.ActionLink("Record New Entry", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>Options</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weight) lbs
+        </td>
+        <td>
+            @DateFormatter(item.Date)
+           
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
