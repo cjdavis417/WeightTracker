@@ -8,11 +8,11 @@
             "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
         };
 
-        string DateFormatter(DateTime date)
-        {
-            return months[date.Month - 1] + " " + date.Day + ", " + date.Year;
+    string DateFormatter(DateTime date)
+    {
+        return months[date.Month - 1] + " " + date.Day + ", " + date.Year;
 
-        }
+    }
 }
 
 <h2>Weight History</h2>
@@ -44,6 +44,9 @@
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+        <td>
+            
         </td>
     </tr>
 }

@@ -28,9 +28,19 @@ header ul li {
 
 .title h1 {
     font-weight: bold;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3em;
+    font-family: 'Rubik Mono One', sans-serif;
     color: #fedd63;
     -webkit-text-stroke: 1px black;
+    margin: 0;
+}
+
+th {
+    font-size: 2em;
+}
+
+td {
+    font-size: 1.5em;
 }
 
 footer {
