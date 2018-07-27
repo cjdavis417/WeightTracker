@@ -122,5 +122,11 @@ namespace WeightTracker.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public void DateCheck()
+        {
+
+        }
+
     }
 }

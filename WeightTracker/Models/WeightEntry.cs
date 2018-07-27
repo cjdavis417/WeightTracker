@@ -16,17 +16,8 @@ namespace WeightTracker.Models
 
         }
 
-        // used only in date formatter function
-        private List<string> months = new List<string>
-        {
-            "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
-        };
-
-        public string DateFormatter(DateTime date)
-        {
-            return months[date.Month] + " " + date.Day + ", " + date.Year;
-
-        }
+        
+        
 
     }
 }

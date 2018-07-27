@@ -17,7 +17,7 @@
 
 <h2>Weight History</h2>
 
-<p>
+<p class="btn btn-default">
     @Html.ActionLink("Record New Entry", "Create")
 </p>
 <table class="table">
@@ -32,23 +32,22 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Weight) lbs
-        </td>
-        <td>
-            @DateFormatter(item.Date)
-           
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-        <td>
-            
-        </td>
-    </tr>
+    <div class="dataRow">
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight) lbs
+            </td>
+            <td>
+                @DateFormatter(item.Date)
+
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) <br />
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) <br />
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    </div>
 }
 
 </table>
